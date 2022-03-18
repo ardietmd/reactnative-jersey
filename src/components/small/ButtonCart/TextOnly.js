@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         backgroundColor: color.primary,
         padding: 10,
         borderRadius: 5,
-        marginBottom: 15
+        marginBottom: 15,
     },
     text: (fontSize) => ({
         color: color.white,

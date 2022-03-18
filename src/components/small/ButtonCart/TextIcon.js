@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IconKeranjang, IconArrowLeft, KeranjangPutih} from '../../../assets/icons';
+import {IconKeranjang, IconArrowLeft, KeranjangPutih, Submit} from '../../../assets/icons';
 import {color, fonts} from '../../../utils';
 
 
@@ -13,6 +13,8 @@ const TextIcon = ({ icon, onPress, title, fontSize }) => {
       return <IconArrowLeft />;
     } else if (icon === 'keranjang-putih') {
         return <KeranjangPutih />
+    } else if (icon === 'submit') {
+      return <Submit />
     }
     return <IconKeranjang />;
   };

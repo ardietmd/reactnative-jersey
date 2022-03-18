@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, Image} from 'react-native';
-import { ButtonCart, CardLiga, Inputan, JerseySlider, Pilihan } from '../../components';
+import { ButtonCart, CardLiga, Inputan, Jarak, JerseySlider, Pilihan } from '../../components';
 import { color, fonts, heightMobileUi, numberWithCommas, responsiveHeight, responsiveWidth } from '../../utils';
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -57,20 +57,21 @@ export default class JerseyDetail extends Component {
                     />
                 </View>
                 
-                <Inputan
+                <Inputan style={styles.keterangan}
                   label="Keterangan"
                   textArea
                   fontSize={13}
                   placeholder="Isi jika ingin menambahkan Name Tag (nama & nomor punggung"
                   />
-                <ButtonCart
+
+                  <Jarak height={13}/>
+                <ButtonCart 
                   title="Masuk Keranjang"
                   type="textIcon"
                   icon="keranjang-putih"
                   padding={responsiveHeight(17)}
                   fontSize={18} />
               </View>
-            
           </View>
         </View>
     );
@@ -128,6 +129,9 @@ const styles = StyleSheet.create({
    flexDirection: 'row',
    justifyContent: 'space-between',
    marginTop: 10
+ },
+ keterangan: {
+   marginBottom: 10
  }
 
 });

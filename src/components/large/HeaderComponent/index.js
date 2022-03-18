@@ -6,7 +6,11 @@ import { IconSeacrh } from '../../../assets/icons';
 import {color, fonts, responsiveHeight} from '../../../utils';
 
 export default class Header extends Component {
+
   render() {
+
+    const {navigation} = this.props;
+
     return (
       <View style={styles.container}>
         <View style={styles.wrapperHeader}>
@@ -15,7 +19,7 @@ export default class Header extends Component {
             <TextInput placeholder="Cari apa. . ." style={styles.input} />
           </View>
           <Jarak width={10}/>
-          <ButtonCart icon="keranjang" totalKeranjang={2}/>
+          <ButtonCart icon="keranjang" totalKeranjang={2}  onPress={() => navigation.navigate('Keranjang')}/>
         </View>
       </View>
     );

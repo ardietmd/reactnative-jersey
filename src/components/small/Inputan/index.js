@@ -1,52 +1,65 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
-import { fonts } from '../../../utils'
+import {StyleSheet, Text, TextInput, View} from 'react-native';
+import React from 'react';
+import {fonts} from '../../../utils';
 
-const Inputan = ({textArea, width, label, height, fontSize, placeHolder}) => {
-    if(textArea) {
-        return(
-            <View style={styles.container}>
-                <Text style={styles.label(fontSize)}>{label} :</Text>
-                <TextInput style={styles.inputTextArea(fontSize)}/>
-            </View>
-        )
-    }
+const Inputan = ({
+  textArea,
+  width,
+  label,
+  height,
+  fontSize,
+  placeHolder,
+  value,
+}) => {
+  if (textArea) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.label(fontSize)}>{label} :</Text>
+        <TextInput
+          style={styles.inputTextArea(fontSize)}
+          multiline={true}
+          numberOfLines={3}
+          value={value}
+        />
+      </View>
+    );
+  }
   return (
     <View>
       <Text>{label}</Text>
-      <TextInput style={styles.input(fontSize, width, height)}/>
+      <TextInput style={styles.input(fontSize, width, height)} value={value}/>
     </View>
-  )
-}
+  );
+};
 
-export default Inputan
+export default Inputan;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10
+    marginTop: 10,
   },
-  label: (fontSize) => ({
-    fontSize: fontSize ? fontSize: 18,
-    fontFamily: fonts.primary.regular
+  label: fontSize => ({
+    fontSize: fontSize ? fontSize : 18,
+    fontFamily: fonts.primary.regular,
   }),
   input: (fontSize, width, height) => ({
-    fontSize: fontSize ? fontSize: 18,
+    fontSize: fontSize ? fontSize : 18,
     fontFamily: fonts.primary.regular,
     width: width,
     height: height,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: "#e0e0e0",
+    borderColor: '#e0e0e0',
     paddingVertical: 5,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   }),
-  inputTextArea: (fontSize) => ({
-    fontSize: fontSize ? fontSize: 18,
+  inputTextArea: fontSize => ({
+    fontSize: fontSize ? fontSize : 18,
     fontFamily: fonts.primary.regular,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: "#e0e0e0",
+    borderColor: '#e0e0e0',
     paddingVertical: 5,
-    paddingHorizontal: 10
-  })
-})
+    paddingHorizontal: 10,
+  }),
+});

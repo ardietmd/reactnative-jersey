@@ -10,32 +10,35 @@ import {
 import {dummyLiga, dummyJersey} from '../../data';
 import {color, fonts} from '../../utils';
 
+
 export default class ListJersey extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       ligas: dummyLiga,
-      jerseys: dummyJersey,
+      jerseys: dummyJersey
+    
     };
   }
 
   render() {
     const {ligas, jerseys} = this.state;
+    const {navigation} = this.props;
     return (
       <View style={styles.page}>
-        <HeaderComponent />
+        <HeaderComponent navigation={navigation}/>
       
           <ScrollView>
             <View style={styles.pilihLiga}>
-              <Text style={styles.label}>Pilih Liga</Text>
+              <Text style={styles.label}>Pilih Liga coy</Text>
               <ListLiga ligas={ligas} />
             </View>
             <View style={styles.pilihJersey}>
               <Text style={styles.label}>
                 Pilih <Text style={styles.labelBold}>Jersey</Text> yang anda suka
               </Text>
-              <ListJerseys jerseys={jerseys} />
+              <ListJerseys jerseys={jerseys} navigation={navigation}/>
               
             </View>
           </ScrollView>

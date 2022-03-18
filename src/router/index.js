@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Splash, ListJersey, Profile, JerseyDetail} from '../pages/';
+import {Home, Splash, ListJersey, Profile, JerseyDetail, Keranjang, CheckOut, EditProfile} from '../pages/';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigator } from '../components';
 
@@ -44,6 +44,18 @@ const Router = () => {
         name="JerseyDetail"
         component={JerseyDetail}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Keranjang"
+        component={Keranjang}
+      />
+      <Stack.Screen
+        name="Checkout"
+        component={CheckOut}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
       />
     </Stack.Navigator>
   );

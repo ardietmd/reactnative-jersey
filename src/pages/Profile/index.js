@@ -32,7 +32,7 @@ export default class Profile extends Component {
               <Text style={styles.desc}>{profile.alamat}</Text>
               <Text style={styles.desc}>{profile.kota}</Text>
             </View>
-            <ListMenu menus={menus}/>
+            <ListMenu menus={menus} navigation={this.props.navigation}/>
           </View>
         </View>
     );

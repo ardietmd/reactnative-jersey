@@ -15,6 +15,8 @@ import IconHistory from './history.svg';
 import IconSignOut from './sign-out.svg';
 import IconArrowLeft from './arrow-left.svg';
 import KeranjangPutih from './keranjang-putih.svg';
+import IconHapus from './hapus.svg';
+import Submit from './submit.svg'
 
 
 export {
@@ -32,5 +34,7 @@ export {
   IconHistory,
   IconSignOut,
   IconArrowLeft,
-  KeranjangPutih
+  KeranjangPutih,
+  IconHapus,
+  Submit
 };
