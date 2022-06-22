@@ -7,5 +7,6 @@ import Inputan from './Inputan';
 import Pilihan from './Pilihan';
 import CardAlamat from './CardAlamat';
 import CardKeranjang from './CardKeranjang';
+import CardHistory from './CardHistory';
 
-export {ButtonCart, Jarak, CardLiga, CardJersey, CardMenu, Inputan, Pilihan, CardKeranjang, CardAlamat}
+export {ButtonCart, Jarak, CardLiga, CardJersey, CardMenu, Inputan, Pilihan, CardKeranjang, CardAlamat, CardHistory}

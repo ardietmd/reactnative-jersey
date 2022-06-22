@@ -7,5 +7,6 @@ import ListJerseys from './ListJerseys';
 import ListMenu from './ListMenu';
 import JerseySlider from './JerseySlider';
 import ListKeranjang from './ListKeranjang';
+import ListHistory from './ListHistory'
 
-export {BottomNavigator, HeaderComponent, BannerSlider, ListLiga, ListJerseys, ListMenu, JerseySlider, ListKeranjang};
+export {BottomNavigator, HeaderComponent, BannerSlider, ListLiga, ListJerseys, ListMenu, JerseySlider, ListKeranjang, ListHistory};

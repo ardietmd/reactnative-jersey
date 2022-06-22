@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   text: {
       fontFamily: fonts.primary.bold,
       marginLeft: 20,
-      color: color.secondary
+      color: '#212121'
   },
   menu: {
     flexDirection: 'row',

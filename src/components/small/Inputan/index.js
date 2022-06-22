@@ -10,6 +10,8 @@ const Inputan = ({
   fontSize,
   placeHolder,
   value,
+  secureTextEntry,
+  keyboardType
 }) => {
   if (textArea) {
     return (
@@ -25,9 +27,9 @@ const Inputan = ({
     );
   }
   return (
-    <View>
-      <Text>{label}</Text>
-      <TextInput style={styles.input(fontSize, width, height)} value={value}/>
+    <View style={styles.container}>
+      <Text style={styles.boldText}>{label}</Text>
+      <TextInput style={styles.input(fontSize, width, height)} value={value} secureTextEntry={secureTextEntry} keyboardType={keyboardType}/>
     </View>
   );
 };
@@ -62,4 +64,10 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: 10,
   }),
+  wrapperText: {
+   paddingVertical: 5
+  },
+  boldText: {
+    fontFamily: fonts.primary.bold
+  }
 });

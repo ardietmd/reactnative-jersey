@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
      },
     ilustrasi: {
+        flex: 1,
         position: 'absolute',
-        bottom: 0,
-        left: 0,
+        justifyContent: 'center',
+        bottom: 0
     }
 
 });

@@ -1,11 +1,11 @@
 import React from 'react';
-import { IconChangePssword, IconEditProfle, IconHistory, IconSignOut } from "../../assets";
+import { IconChangePssword, IconEditProfle, IconHistory, IconJersey, IconSignOut, IconUser } from "../../assets";
 
 export const dummyMenu = [
     {
       id: 1,
       nama: 'Edit Profile',
-      gambar: <IconEditProfle/>,
+      gambar: <IconUser/>,
       halaman: 'EditProfile'
     },
     {
@@ -17,7 +17,7 @@ export const dummyMenu = [
     {
       id: 3,
       nama: 'History Pemesanan',
-      gambar: <IconHistory />,
+      gambar: <IconJersey />,
       halaman: 'History'
     },
     {
