@@ -11,8 +11,10 @@ import {
 } from '../../components';
 import {dummyLiga, dummyJersey} from '../../data';
 import {color, fonts} from '../../utils';
+import { connect } from 'react-redux';
+import {getUser, GET_USER} from '../../actions/UserAction';
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -22,12 +24,16 @@ export default class Home extends Component {
     };
   }
 
+// componentDidMount() {
+//   this.props.getUser();
+// }
+
   render() {
     const {ligas, jerseys} = this.state;
     const {navigation} = this.props;
     return (
       <View style={styles.page}>
-        <HeaderComponent navigation={navigation} />
+        {/* <HeaderComponent navigation={navigation} /> */}
         <BannerSlider />
           <ScrollView>
             <View style={styles.pilihLiga}>
@@ -38,8 +44,9 @@ export default class Home extends Component {
               <Text style={styles.label}>
                 Pilih <Text style={styles.labelBold}>Jersey</Text> yang anda suka
               </Text>
-              <ListJerseys jerseys={jerseys} navigation={navigation}/>
-              <ButtonCart type="text" title="Lihat Semua"/>
+            
+              {/* <ListJerseys jerseys={jerseys} navigation={navigation}/> */}
+              {/* <ButtonCart type="text" title="Lihat Semua"/> */}
             </View>
           </ScrollView>
         <Jarak height={100}/>
@@ -49,6 +56,12 @@ export default class Home extends Component {
   }
 }
 
+// const mapStateProps = (state) => ({
+//   dataUser: state.UserReducer.dataUser
+// })
+
+
+export default Home
 const styles = StyleSheet.create({
   page: {
     flex: 1,
